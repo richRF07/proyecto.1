@@ -7,8 +7,8 @@
  - NOM DE GITHUB : NAHUECR77
  - GMAIL : nbbima@escuelasproa.edu.ar
  ### Segundo Integrante:
- -NOMBRE Y APELLIDO : FRANCISCO NUÑEZ
- -DNI : 47912892
+ - NOMBRE Y APELLIDO : FRANCISCO NUÑEZ
+ - DNI : 47912892
  - NOM DE GITHUB: richRF07
  - GMAIL : rfnunez@escuelasproa.edu.ar
 
