@@ -28,7 +28,7 @@ respuestas = [
 ]
 
 # Función para administrar el cuestionario
-def cuestionario():
+def cues():
     puntuacion = 0
     for i in range(len(preguntas)):
         print(preguntas[i])
@@ -39,8 +39,3 @@ def cuestionario():
         else:
             print("Incorrecto. La respuesta correcta es:", respuestas[i])
     print("Tu puntuación final es:", puntuacion, "de", len(preguntas))
-
-# Ejecutar el cuestionario
-if __name__ == "__main__":
-    print("¡Bienvenido al Cuestionario Geográfico!")
-    cuestionario()
