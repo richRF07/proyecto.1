@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuestionario Geográfico</title>
+    <link rel="stylesheet" href="estilo.css"> <!-- Vincula tu archivo CSS -->
+</head>
+<body>
+    <div class="ventana">
+        <h1>Cuestionario Geográfico</h1>
+        <p id="pregunta"></p>
+        <input type="text" id="respuesta" placeholder="Tu respuesta aquí">
+        <button id="enviarBtn">Enviar</button>
+        <p id="resultado"></p>
+        <button id="siguienteBtn">Siguiente</button>
+    </div>
+
+    <script>
+        const preguntas = [
+            { pregunta: "¿Cuál es la capital de Francia?", respuesta: "París" },
+            { pregunta: "¿Cuál es el río más largo del mundo?", respuesta: "Amazonas" },
+            { pregunta: "¿En qué país se encuentra el Taj Mahal?", respuesta: "India" },
+            { pregunta: "¿Cuál es la montaña más alta del mundo?", respuesta: "Monte Everest" },
+            { pregunta: "¿Cuál es el país más grande del mundo por área?", respuesta: "Rusia" },
+            { pregunta: "¿Cuál es el océano más grande del mundo?", respuesta: "Océano Pacífico" },
+            { pregunta: "¿Cuál es el punto más bajo de la Tierra?", respuesta: "Mar Muerto" },
+            { pregunta: "¿Qué país es conocido como 'La Tierra del Sol Naciente'?", respuesta: "Japón" },
+            { pregunta: "¿Cuál es la capital de Australia?", respuesta: "Canberra" },
+            { pregunta: "¿Cuál es la cordillera más larga del mundo?", respuesta: "Cordillera de los Andes" }
+        ];
+
+        let indicePregunta = 0;
+        let puntuacion = 0;
+
+        function mostrarPregunta() {
+            if (indicePregunta < preguntas.length) {
+                document.getElementById('pregunta').innerText = preguntas[indicePregunta].pregunta;
+                document.getElementById('respuesta').value = '';
+                document.getElementById('resultado').innerText = '';
+            } else {
+                document.getElementById('pregunta').innerText = `Tu puntuación final es: ${puntuacion} de ${preguntas.length}`;
+                document.getElementById('respuesta').style.display = 'none';
+                document.getElementById('siguienteBtn').style.display = 'none';
+            }
+        }
+
+        function validarRespuesta() {
+            const respuestaUsuario = document.getElementById('respuesta').value.trim();
+            if (respuestaUsuario.toLowerCase() === preguntas[indicePregunta].respuesta.toLowerCase()) {
+                puntuacion++;
+                document.getElementById('resultado').innerText = "¡Correcto!";
+            } else {
+                document.getElementById('resultado').innerText = "Incorrecto. La respuesta correcta es: " + preguntas[indicePregunta].respuesta;
+            }
+        }
+
+        function siguientePregunta() {
+            indicePregunta++;
+            mostrarPregunta();
+        }
+
+        document.getElementById('enviarBtn').addEventListener('click', () => {
+            validarRespuesta();
+        });
+
+        document.getElementById('siguienteBtn').addEventListener('click', () => {
+            siguientePregunta();
+        });
+
+        // Inicializar el cuestionario
+        mostrarPregunta();
+    </script>
+</body>
+</html>
