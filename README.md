@@ -1,4 +1,4 @@
-# Nombre del proyecto - 0.2
+# - Nombre del proyecto - 
 - CUESTIONARIO GEOGRÁFICO -
 ## INFO DE LOS CREADORES:
 ### Primer Integrante:
