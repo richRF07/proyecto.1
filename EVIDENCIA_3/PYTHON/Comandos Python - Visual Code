@@ -1,0 +1,36 @@
+-Comandos Comunes de Python-
+
+
+print(): Imprime texto o variables en la consola.
+input(): Captura la entrada del usuario desde la consola.
+len(): Devuelve la longitud de una cadena, lista u otro objeto iterable.
+type(): Devuelve el tipo de un objeto.
+range(): Genera una secuencia de números, comúnmente utilizado en bucles.
+list(): Crea una lista a partir de un iterable.
+dict(): Crea un diccionario.
+set(): Crea un conjunto, eliminando duplicados de una colección.
+def: Define una función.
+import: Importa módulos o bibliotecas externas.
+if, elif, else: Estructuras de control de flujo.
+for: Itera sobre una secuencia (lista, cadena, etc.).
+while: Ejecuta un bloque de código mientras se cumpla una condición.
+try, except: Manejo de excepciones para controlar errores.
+class: Define una clase en programación orientada a objetos.
+-Comandos Comunes de Visual Studio Code-
+
+
+Ctrl + P: Abre rápidamente archivos por nombre.
+Ctrl + Shift + P: Abre la paleta de comandos para acceder a diversas funciones.
+Ctrl + `: Abre la terminal integrada.
+Ctrl + B: Muestra u oculta la barra lateral.
+F5: Inicia la depuración del código.
+Ctrl + Shift + O: Navega por los símbolos de un archivo.
+Alt + Shift + F: Formatea el código según las reglas definidas.
+Ctrl + /: Comenta o descomenta la línea seleccionada.
+Ctrl + Space: Muestra sugerencias de autocompletado.
+Ctrl + Shift + E: Abre el explorador de archivos.
+Ctrl + Shift + F: Busca texto en todos los archivos del proyecto.
+F2: Renombra la variable o archivo seleccionado.
+Ctrl + K, Ctrl + S: Abre la lista de atajos de teclado.
+Ctrl + Shift + V: Previsualiza archivos Markdown.
+Ctrl + K, Ctrl + Z: Inicia el modo de edición de notas.
