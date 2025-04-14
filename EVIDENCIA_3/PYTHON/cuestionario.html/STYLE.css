@@ -1,76 +1,97 @@
-@import "https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap";
-
-{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 body {
-    font-family: "Poppins", sans-serif;
-    font-size: 1.2rem;
-    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+    margin: 0;
     padding: 20px;
+    color: #2c3e50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
-.grid-container>* {
-    box-shadow: 10px 6px 37px -13px rgba(51, 51, 51, 0.74);
-    border-radius: 10px;
-    padding: 10px;
+.ventana {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    padding: 30px;
+    max-width: 500px;
+    width: 90%;
     text-align: center;
-    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    animation: aparecer 1s ease-in-out;
 }
 
-.grid-container {
-    display: grid;
-    gap: 20px;
-    grid-template:
-        "gay" 200px
-        "navbar" 50px
-        "main" 100px
-        "sidebar"
-        "footer";
+@keyframes aparecer {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
 
-    .header {
-        grid-area: header;
-        background-color:#3CB371;
+h1 {
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(102, 166, 255, 0.7);
+}
+
+button {
+    background: linear-gradient(135deg, #74ebd5 0%, #9face6 100%);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px 5px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #011efde6 0%, #013687 100%);
+    transform: scale(1.05);
+}
+
+#resultado {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #f44336;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .ventana {
+        padding: 20px;
     }
 
-    .navbar {
-        grid-area: navbar;
-        background-color:#9ACD32;
+    h1 {
+        font-size: 1.5rem;
     }
 
-    .sidebar {
-        grid-area: sidebar;
-        background-color:#8B4513;
+    input[type="text"], button {
+        font-size: 14px;
+        padding: 10px;
     }
 
-    .main {
-        grid-area: main;
-        background-color:
-    }
-
-    .footer {
-        grid-area: footer;
-        background-color:black;
-    }
-
-    @media (min-width:768px) {
-        grid-template:
-            "header navbar" 50px
-            "header navbar" 50px
-            "sidebar main" auto
-            "footer footer" 100px/
-            200px auto;
-           
-    }
-    @media (min-width:992px) {
-        grid-template:
-            "header header header" 100px
-            "navbar main sidebar" auto
-            "footer footer footer" 100px/
-            200px auto 200px;
-           
+    #resultado {
+        font-size: 16px;
     }
 }
